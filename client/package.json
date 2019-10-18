@@ -1,0 +1,51 @@
+{
+  "name": "cwt-payem-dev",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "npm": "5.6.0",
+    "node": "8.11.3"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.4.2",
+    "@material-ui/icons": "^4.4.1",
+    "@material-ui/lab": "^4.0.0-alpha.26",
+    "axios": "^0.19.0",
+    "bootstrap": "^4.3.1",
+    "formik": "^1.5.8",
+    "material-table": "^1.50.0",
+    "material-ui-icons": "^1.0.0-beta.36",
+    "mdbreact": "^4.19.1",
+    "npm": "^6.11.3",
+    "react": "^16.9.0",
+    "react-datepicker": "^2.9.6",
+    "react-dom": "^16.9.0",
+    "react-scripts": "3.1.1",
+    "react-spring": "^8.0.27",
+    "reactstrap": "^8.0.1",
+    "recharts": "^1.7.1",
+    "yup": "^0.27.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "proxy": "http://localhost:3001"
+}
