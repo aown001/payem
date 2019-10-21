@@ -62,19 +62,21 @@ export default class SignIn extends Component {
     try {
       response = await axios({
         method: 'post',
-        url: '/auth/signin',
+        url: 'http://localhost:4000/auth/login',
         data: this.state.user
       })
       console.log("Response ", response)
 
       if (response.status === 200) {
         window.loggedIn = true
-        this.props.history.push("/");
+        this.props.history.push("/home");
       }
-
     }
     catch (err) {
-
+      console.log("ERROR ", err.message)
+      this.setState({
+        error: 'Incorrect Email or Password'
+      })
       return
     }
   }
@@ -88,6 +90,7 @@ export default class SignIn extends Component {
         <Container className="login">
           <h2>Sign In</h2>
           <hr />
+          {this.state.error ? <span className="text-danger pl-4">Incorrect Email or Password </span> : null }
           <Form className="login-form">
             <Col>
               <FormGroup>

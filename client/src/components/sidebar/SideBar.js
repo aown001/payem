@@ -78,7 +78,7 @@ const SideBar = props => (
     <div className="sidebar-header">
       <span color="info" onClick={props.toggle} style={{ color: '#fff' }}>&times;</span>
       {/* <h3>Pay'Em</h3> */}
-      <NavLink className="mb-2" tag={Link} to={'/'}>
+      <NavLink className="mb-2" tag={Link} to={'/home'}>
         <img src={logo} width={130} height={130} className="pt-3 ml-4 pb-3" alt="" />
       </NavLink>
     </div>

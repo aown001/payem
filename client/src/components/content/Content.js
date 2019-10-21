@@ -24,7 +24,7 @@ export default props => (
   <Container fluid className={classNames('content', { 'is-open': props.isOpen })}>
     <NavBar toggle={props.toggle} />
     <Switch>
-      <Route exact path="/" component={Home} />
+      <Route exact path="/home" component={Home} />
       <Route exact path="/employees" component={Employees} />
       <Route exact path="/employee/:id" component={Employee} />
       <Route exact path="/payroll-settings" component={Settings} />

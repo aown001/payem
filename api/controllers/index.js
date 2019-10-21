@@ -4,6 +4,7 @@ const ContributionController = require('./contribution');
 const DeductionController = require('./deduction');
 const CodeController = require('./code');
 const PayrollController = require('./payroll');
+const AuthController = require('./auth');
 
 module.exports = {
     EmployeeController,
@@ -12,4 +13,5 @@ module.exports = {
     DeductionController,
     CodeController,
     PayrollController,
+    AuthController
 }
