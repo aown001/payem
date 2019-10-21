@@ -11,8 +11,8 @@ export default () => {
     <Router>
       <div className="App wrapper">
         <Switch>
-          <Route exact path="/" component={SignIn} />
-          <Route exact path="/home" component={Routes} />
+          <Route exact path="/signin" component={SignIn} />
+          <Route path="/" component={Routes} />
         </Switch>
       </div>
     </Router>

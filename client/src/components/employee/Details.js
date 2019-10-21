@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import Validation from '../validation/Validation';
 import axios from 'axios';
 import Snackbar from '../widgets/Snackbar';
+import { Route, withRouter } from 'react-router-dom';
 
 const personalInfoFields = [
     { type: 'TextField', label: 'First Name', name: 'fst_name' },
@@ -213,7 +214,7 @@ const ValidationSchema = Yup.object().shape({
     // }),
 });
 
-export default function Details(props) {
+function Details(props) {
     const [data, setdata] = React.useState();
     const [errors, setErrors] = React.useState([]);
     const [snackbar, setSnackbar] = React.useState({ open: false, });
@@ -257,6 +258,7 @@ export default function Details(props) {
             return;
         }
         setSnackbar({ ...snackbar, open: false })
+        props.history.push("/employees");
     }
 
     if (data) {
@@ -284,3 +286,5 @@ export default function Details(props) {
         return null;
     }
 }
+
+export default withRouter(Details)
